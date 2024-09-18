@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lab6.HelloController">
+   <children>
+      <MenuBar layoutY="1.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Sort">
+            <items>
+                  <MenuItem fx:id="numberSort" mnemonicParsing="false" onAction="#selectColumnForNumber" text="By Numbers" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortByAlpha" text="Alphabetically" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Filter">
+            <items>
+                  <MenuItem fx:id="textSort" mnemonicParsing="false" onAction="#selectColumnForText" text="By Text" />
+              <MenuItem fx:id="filterDate" mnemonicParsing="false" onAction="#showDateSelection" text="By Date" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="dataTable" layoutX="42.0" layoutY="89.0" prefHeight="547.0" prefWidth="846.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="43.0" text="ID" />
+          <TableColumn fx:id="fnCol" prefWidth="99.0" text="FIRST NAME" />
+            <TableColumn fx:id="lnCol" prefWidth="118.0" text="LAST NAME" />
+            <TableColumn fx:id="emailCol" prefWidth="141.0" text="EMAIL" />
+            <TableColumn fx:id="genderCol" prefWidth="87.0" text="GENDER" />
+            <TableColumn fx:id="counCol" prefWidth="120.0" text="COUNTRY" />
+            <TableColumn fx:id="domCol" prefWidth="105.0" text="DOMAIN" />
+            <TableColumn fx:id="birthCol" prefWidth="132.0" text="BIRTH DATE" />
+        </columns>
+      </TableView>
+      <ProgressBar fx:id="prgs1" layoutX="42.0" layoutY="651.0" prefWidth="200.0" progress="0.0" />
+      <ProgressBar fx:id="prgs2" layoutX="318.0" layoutY="651.0" prefWidth="200.0" progress="0.0" />
+      <ProgressBar fx:id="prgs3" layoutX="555.0" layoutY="651.0" prefWidth="200.0" progress="0.0" />
+      <ComboBox fx:id="errorList" layoutX="729.0" layoutY="35.0" prefWidth="150.0" promptText="Errors" />
+   </children>
+</Pane>

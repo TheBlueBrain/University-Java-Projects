@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white; -fx-border-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lab6.DateController">
+   <children>
+      <DatePicker fx:id="fromDate" layoutX="41.0" layoutY="178.0" onAction="#setLower" />
+      <DatePicker fx:id="toDate" layoutX="342.0" layoutY="178.0" onAction="#setUpper" />
+      <Label layoutX="103.0" layoutY="139.0" text="From Date" />
+      <Label layoutX="412.0" layoutY="139.0" text="To Date" />
+      <Label layoutX="166.0" layoutY="59.0" text="Select Date For Filtering">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
